@@ -23,34 +23,16 @@
 ----
 ### 使用方法
 
-1. 下載 MediaWiki: http://www.mediawiki.org/wiki/MediaWiki
+    require_once "mediawiki-zhconverter.inc.php";
 
-2. 解壓在路徑如：/var/lib/mediawiki-1.13.3
-
-3. 下載 mediawiki-zhconverter，解壓及把 mediawiki-zhconverter.inc.php 抄到你 PHP 程序當中
-
-4. 在你的程序中設定 MediaWiki 路徑, 及引用 mediawiki-zhconverter
-
-
-        define("MEDIAWIKI_PATH", "/var/lib/mediawiki-1.6.10/");
-        require_once "mediawiki-zhconverter.inc.php";
-
-
-4. 作出轉換
-
-        /*
-            MediaWikiZhConverter::convert( "字詞", "轉換目標");  
-            轉換目標 = zh, zh-cn, zh-tw, zh-sg, zh-hk
-        */
-        
-        echo MediaWikiZhConverter::convert("面包", "zh-tw");
-        echo MediaWikiZhConverter::convert("記憶體", "zh-cn");
-        echo MediaWikiZhConverter::convert("罗纳尔多", "zh-hk");
-
-
-
-5. 完成
-
+    /*
+        MediaWikiZhConverter::convert( "字詞", "轉換目標");  
+        轉換目標 = zh, zh-cn, zh-tw, zh-sg, zh-hk
+    */
+    
+    echo MediaWikiZhConverter::convert("面包", "zh-tw");
+    echo MediaWikiZhConverter::convert("記憶體", "zh-cn");
+    echo MediaWikiZhConverter::convert("罗纳尔多", "zh-hk");
 
 ----
 ### 支援版本
